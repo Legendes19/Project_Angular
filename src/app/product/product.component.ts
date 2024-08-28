@@ -10,19 +10,19 @@ export class ProductComponent {
     products : Product [] = [
       {"id": 1,
         "name": "SKin Valora",
-        "price": 5000.00,
+        "price": 5000,
         "category": "Roubo"
       },
 
       {"id": 1,
         "name": "Vandal Skin",
-        "price": 2000.00,
+        "price": 2000,
         "category": "Roubo"
       },
 
       {"id": 1,
         "name": "Matheus",
-        "price": 1.00,
+        "price": 1,
         "category": "Primata"
       },
     ];
