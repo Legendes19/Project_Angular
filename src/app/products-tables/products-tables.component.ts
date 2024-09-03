@@ -1,29 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-products-tables',
   templateUrl: './products-tables.component.html',
-  styleUrl: './products-tables.component.css'
+  styleUrl: './products-tables.component.css',
 })
-export class ProductsTablesComponent {
-  products : Product [] = [
-    {"id": 1,
-      "name": "SKin Valora",
-      "price": 5000,
-      "category": "Roubo"
-    },
+export class ProductsTablesComponent implements OnInit {
+  products: Product[] = [];
 
-    {"id": 1,
-      "name": "Vandal Skin",
-      "price": 2000,
-      "category": "Roubo"
-    },
-
-    {"id": 1,
-      "name": "Matheus",
-      "price": 1,
-      "category": "Primata"
-    },
-  ];
+  constructor(private service: ProductService) {}
+  ngOnInit() {
+    this.loadProducts();
+  }
+  loadProducts() {
+    this.service.getProducts().subscribe({
+      next: (data) => (this.products = data),
+    });
+  }
 }

@@ -1,0 +1,21 @@
+{
+  "products" : [
+    {"id": 1,
+      "name": "SKin Valora",
+      "price": 5000,
+      "category": "Roubo"
+    },
+
+    {"id": 1,
+      "name": "Vandal Skin",
+      "price": 2000,
+      "category": "Roubo"
+    },
+
+    {"id": 1,
+      "name": "Matheus",
+      "price": 1,
+      "category": "Primata"
+    }
+  ]
+}
